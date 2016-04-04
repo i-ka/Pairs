@@ -29,13 +29,15 @@ Window {
 
                 Rectangle {
                     id: cellItem
-                    width: 48
+                    width: 32
                     height: 32
                     property Cell cell: field.cellAt(index % field.width, index / field.width)
 
-                    Text {
+                    Image {
+                        anchors.fill:parent
+                        source: "qrc:images/img/"+cell.key+".png"
+                        fillMode: Image.PreserveAspectFit
                         anchors.centerIn: parent
-                        text: cell.key
                     }
                 }
             }

@@ -2,4 +2,12 @@
     <qresource prefix="/">
         <file>main.qml</file>
     </qresource>
+    <qresource prefix="images">
+    <file>img\0.png</file>
+        <file>img\1.png</file>
+        <file>img\2.png</file>
+        <file>img\3.png</file>
+        <file>img\4.png</file>
+        <file>img\5.png</file>
+    </qresource>
 </RCC>
