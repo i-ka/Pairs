@@ -4,9 +4,12 @@ import QtQuick.Window 2.2
 import Pairs 1.0
 
 Window {
+    id: window
     visible: true
     width: 800
     height: 600
+    minimumHeight: 400
+    minimumWidth: 400
 
     Field {
         id: field
@@ -22,6 +25,8 @@ Window {
             id: grid
             rows: field.width
             columns: field.height
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.horizontalCenter: parent.horizontalCenter
             spacing: 4
 
             Repeater {
@@ -29,8 +34,8 @@ Window {
 
                 Rectangle {
                     id: cellItem
-                    width: 32
-                    height: 32
+                    width: window.width/field.width - grid.spacing*1.5
+                    height: window.height/field.height - grid.spacing*1.5
                     property Cell cell: field.cellAt(index % field.width, index / field.width)
 
                     Image {
